@@ -1,0 +1,629 @@
+body {
+  display: flex;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.leftSideBar {
+  position: fixed;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  resize: both;
+  background: #fefdfe;
+  background-size: cover;
+  align-items: space-between;
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  border: none;
+  padding: 0;
+}
+
+#rightSideBar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  resize: both;
+  margin-left: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.createList {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #d3d3d3;
+  width: 400px;
+  height: 90%;
+  margin: 30px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.objectName {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.description {
+  position: relative;
+  display: flex;
+  bottom: 13px;
+}
+
+.addToList {
+  position: relative;
+  display: flex;
+  color: #000;
+  border-bottom: 1px solid #ff2eff;
+  width: 100wh;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  letter-spacing: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.objectName {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.objectName input {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  font-size: 1.4rem;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background: none;
+  color: #000;
+  height: 30px;
+  width: 350px;
+  text-align: left;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 10px;
+}
+
+.titleHeader {
+  display: flex;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.4rem;
+  position: relative;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.objectName input::placeholder {
+  display: flex;
+  flex-wrap: wrap;
+  color: #000;
+  opacity: 1;
+  border-radius: 10px;
+  letter-spacing: 0px;
+  font-size: 1.4rem;
+  padding: 10px;
+  text-align: left;
+}
+
+.description textarea {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  background: none;
+  color: #000;
+  font-size: 1.3rem;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: 100px;
+  width: 350px;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 10px; /* add some padding to the textarea */
+  box-sizing: border-box; /* add this to include padding in the height calculation */
+  resize: none;
+}
+
+.description {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  vertical-align: text-top;
+}
+
+.descriptionHeader {
+  display: flex;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.4rem;
+  position: relative;
+  margin: 5px;
+}
+
+.description textarea::placeholder {
+  color: #000;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  text-align: left;
+  vertical-align: top;
+  letter-spacing: 0px;
+  margin: 0px;
+  padding-top: 0px;
+}
+
+.dateAdd {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
+
+#datePicker {
+  background-color: #d3d3d3;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 5px;
+  margin-right: 35px;
+}
+
+.addBtn {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff2eff;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: 3px solid #000;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0px #000;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 5px;
+  margin-left: 35px;
+}
+
+.editBtn {
+  position: relative;
+  background: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 5px;
+  transform: rotate(0deg);
+}
+
+.newObject {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-image-slice: 1;
+  background: #d3d3d3;
+  border-radius: 0px;
+  border: 1px solid #000;
+  width: 80%;
+  height: 20%;
+  margin: 30px;
+  padding: 10px;
+}
+
+.closeObject {
+  position: relative;
+  display: flex;
+  border: none;
+  background: none;
+  color: #000;
+  height: 15px;
+  width: 15px;
+  background-color: #000;
+  border-radius: 100%;
+}
+
+.objectTitle {
+  position: relative;
+  display: flex;
+  /*flex-basis: 100%;*/
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0px;
+  width: 40%;
+  height: 40px;
+  text-align: center;
+  color: #000;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-overflow: clip;
+  white-space: wrap;
+}
+
+.objectTitle::-webkit-scrollbar {
+  width: 12px;
+  background-color: #d3d3d3;
+  border: 1px solid #000;
+  border-radius: 0px;
+}
+
+.objectTitle::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 0px;
+}
+
+.objectDescription {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 250px;
+  font-size: 1.4rem;
+  width: 80%;
+  height: 45%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  color: #000;
+  background: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-overflow: clip;
+  white-space: wrap;
+}
+
+.objectDescription::-webkit-scrollbar {
+  width: 12px;
+  background-color: #fefdfd;
+  border-radius: 0px;
+}
+
+.objectDescription::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 0px;
+}
+
+.nailedIt {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  letter-spacing: 0px;
+  font-weight: bold;
+  border: 3px solid #000;
+  border-radius: 8px;
+  background: #ff2eff;
+  color: #000;
+  box-shadow: 3px 3px 0px #000;
+  transform: rotate(0deg);
+  text-align: center;
+  padding: 5px;
+  margin-left: auto;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-top: auto;
+  filter: none;
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+.createList .reqRed::placeholder {
+  color: red;
+  font-size: 1.4rem;
+  letter-spacing: normal;
+}
+
+.dateDiv {
+  position: relative;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fefdfd;
+  background-color: #000;
+  opacity: 1;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+.objectTitle.editIt {
+  cursor: text;
+  color: #fefdfd;
+  background-color: #5e4da1;
+}
+
+.objectDescription.editIt {
+  cursor: text;
+  color: #fefdfd;
+  background-color: #5e4da1;
+}
+
+.dragging {
+  opacity: 1;
+}
+
+.newObject.over {
+  opacity: 0.1;
+}
+
+.filterButtons {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.allBtn {
+  transform: rotate(0deg);
+  width: 40px;
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  background-repeat: no-repeat;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #000;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.doneBtn {
+  transform: rotate(0deg);
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #000;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.undoneBtn {
+  transform: rotate(0deg);
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: none;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #000;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 5px;
+}
+.selectedAll {
+  width: 40px;
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fefdfd;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #000;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.selectedDone {
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fefdfd;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.selectedUndone {
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fefdfd;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+#searchSubmit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 0px;
+  border-right: 1px solid #000;
+  border-radius: 0px 10px 10px 0px;
+  text-align: center;
+  letter-spacing: 0px;
+  font-size: 1rem;
+  height: 30px;
+  padding: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
+  padding: 4px;
+}
+
+#searchInput {
+  background: none;
+  color: #000;
+  font-size: 1rem;
+  border: 1px solid #000;
+  border-radius: 10px 0px 0px 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 0px;
+  padding: 4px;
+}
+
+#searchInput::placeholder {
+  color: #000;
+}
+
+.searchTools {
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#deadline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+#dlOptional {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+#filterHeader {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  font-size: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* Target the entire page scrollbar */
+::-webkit-scrollbar {
+  width: 20px; /* Width of the scrollbar */
+  border: 1px solid #000;
+}
+
+/* Scrollbar Track (background) */
+::-webkit-scrollbar-track {
+  background: #a3a3a3; /* Light gray */
+  border: 1px solid #000;
+}
+
+/* Scrollbar Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #3f3f3f; /* Dark gray */
+  border: 1px solid #000;
+}
+
+/* Hover effect on the scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+  border: 1px solid #000;
+}

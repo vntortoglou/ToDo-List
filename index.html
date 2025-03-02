@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+      <div class="leftSideBar" id="leftSideBar">
+        <div class="redHalf"></div>
+        <div class="createList">
+          <header class="addToList">A Light ToDo List</header>
+
+          <div class="objectName">
+            <div class="titleHeader">Title</div>
+            <input
+              type="text"
+              name="objectName"
+              id="objectName"
+              placeholder=""
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="description">
+            <div class="descriptionHeader">Description</div>
+            <textarea
+              id="description"
+              placeholder=""
+              autocomplete="off"
+            ></textarea>
+          </div>
+
+          <div class="dateAdd">
+            <div id="deadline">Deadline<div id="dlOptional">(Optional)</div></div.dlOptional></div>
+          <input type="date" id="datePicker">
+          <button type="button" onclick="addNewObject()" class="addBtn">
+            Add
+          </button>
+        </div>
+        <div id="filterHeader">Filters</div>
+
+          <div class="filterButtons">
+            <button id="allBtn" class="allBtn selectedAll">All</button>
+            <button id="doneBtn" class="doneBtn">Complete</button>
+            <button id="undoneBtn" class="undoneBtn">In progress</button>
+          </div>
+
+          <div class="searchTools">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search [All]"
+              autocomplete="off"
+            />
+            <button id="searchSubmit">Search</button>
+          </div>
+        </div>
+      </div>
+      <div id="rightSideBar"></div>
+    </div>
+    <script src="./javascript.js"></script>
+  </body>
+</html>
