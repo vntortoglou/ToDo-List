@@ -12,8 +12,6 @@ const createList = document.querySelector(".createList");
 const rightSideBar = document.getElementById("rightSideBar");
 const datePicker = document.getElementById("datePicker");
 
-
-
 //Date format
 const date = new Date();
 const formattedDate = `${date.getDate()}-${
@@ -37,22 +35,17 @@ function createObjectDOM(task, index) {
   objectTitleDiv.textContent = task.title;
   newDiv.appendChild(objectTitleDiv);
 
-    // Close Button  <--- in createObjectDom function
-    let closeButton = document.createElement("button");
-    closeButton.setAttribute("class", "closeObject");
-    closeButton.addEventListener("click", function () {
-      handleCloseButtonClick(task);
-    });
-    newDiv.appendChild(closeButton);
 
-    // Edit Button
-    let editBtn = document.createElement("button");
-    editBtn.setAttribute("class", "editBtn");
-    editBtn.innerText = "Edit";
-    editBtn.addEventListener("click", function () {
-      handleEditButtonClick(objectTitleDiv, objectDescriptionDiv);
-    });
-    newDiv.appendChild(editBtn);
+
+  // Close Button  <--- in createObjectDom function
+  let closeButton = document.createElement("button");
+  closeButton.setAttribute("class", "closeObject");
+  closeButton.addEventListener("click", function () {
+    handleCloseButtonClick(task);
+  });
+  newDiv.appendChild(closeButton);
+
+
 
   // Object Description  <--- in createObjectDom function
   let objectDescriptionDiv = document.createElement("div");
@@ -60,6 +53,14 @@ function createObjectDOM(task, index) {
   objectDescriptionDiv.textContent = task.description;
   newDiv.appendChild(objectDescriptionDiv);
 
+          // Edit Button
+  let editBtn = document.createElement("button");
+  editBtn.setAttribute("class", "editBtn");
+  editBtn.innerText = "Edit";
+  editBtn.addEventListener("click", function () {
+    handleEditButtonClick(objectTitleDiv, objectDescriptionDiv);
+  });
+  newDiv.appendChild(editBtn);
 
 
   // Task Completed Button   <--- in createObjectDom function
@@ -220,11 +221,13 @@ searchSubmit.addEventListener("click", function () {
     rightSideBar.appendChild(newDiv);
   });
   searchInput.value = "";
-
 });
 
-searchInput.addEventListener("focus", function(){
-  if(searchInput.placeholder = "Search  [All]" || "Search [Completed]" || "Search [In Progress]"){
+searchInput.addEventListener("focus", function () {
+  if (
+    (searchInput.placeholder =
+      "Search  [All]" || "Search [Completed]" || "Search [In Progress]")
+  ) {
     searchInput.placeholder = "";
   }
 });
@@ -255,7 +258,7 @@ objectName.addEventListener("blur", function () {
 });
 
 objectName.addEventListener("focus", function () {
-  if(objectName.placeholder === "*Invalid Input") {
+  if (objectName.placeholder === "*Invalid Input") {
     objectName.placeholder = "";
   }
 });
@@ -271,7 +274,6 @@ description.addEventListener("focus", function () {
     description.placeholder = "";
   }
 });
-
 
 function addNewObject() {
   const dateValue = document.getElementById("datePicker").value;
@@ -297,7 +299,6 @@ function addNewObject() {
     objectName.value = "";
     description.value = "";
     datePicker.value = "";
-
   }
 }
 
@@ -352,6 +353,3 @@ undoneBtn.addEventListener("click", function () {
   undoneBtn.classList.add("selectedUndone");
   searchInput.placeholder = "Search [In Progress]";
 });
-
-
-

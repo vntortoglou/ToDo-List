@@ -250,8 +250,9 @@ body {
   border: none;
   background: none;
   color: #000;
-  height: 15px;
-  width: 15px;
+  height: 16px;
+  width: 16px;
+  margin-bottom: 6px;
   background-color: #000;
   border-radius: 100%;
 }
